@@ -3,15 +3,35 @@
   <head>
     <meta charset="utf-8">
     <title>Assignment 3</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-  * {
-  box-sizing: border-box;
-}
-    body {
-      font-family: "A Day Without Sun Text";
-      margin: 0;
+
+    <style>
+    /*
+      Code copied from: https://www.w3schools.com/howto/howto_js_image_grid.asp
+      Code copied from: https://www.w3schools.com/howto/howto_js_topnav.asp
+      Code copied from: https://www.w3schools.com/howto/howto_css_topnav_split.asp
+      Code copied from: https://www.w3schools.com/css/css_website_layout.asp
+			Author: w3schools.com
+			Name: Image Grid
+      Name: Top Navigation
+      Name: Split Navigation
+      Name: CSS Website Layout
+			Description: Displays images in a grid.
+      Description: Displays a top navigation bar.
+      Description: Displays a split top navigation bar.
+      Description: Displays a website layout.
+			dec. 5, 2023
+      */
+      
+      /* Copied Code Starts */
+      * {
+        box-sizing: border-box;
       }
+   
+      body {
+        font-family: "A Day Without Sun Text";
+        margin: 0;
+      }
+
       .header {
         font-size: 200%;
         background-color: white;
@@ -19,8 +39,8 @@
         text-align: center;
         color: #01062e;
       }
-
-   ul {
+  
+      ul {
         list-style-type: none;
         margin: 0;
         padding: 0;
@@ -75,60 +95,67 @@
       .dropdown:hover .dropdown-content {
         display: block;
       }
-.topnav a.split {
-  text-decoration: none;
-  padding: 14px 16px;
-  font-size: 25px;
-  float: right;
-  background-color: #01062e;
-  color: white;
-}
-     .topnav a.split:hover {
+
+      .topnav a.split {
+        text-decoration: none;
+        padding: 14px 16px;
+        font-size: 25px;
+        float: right;
+        background-color: #01062e;
+        color: white;
+      }
+
+      .topnav a.split:hover {
         background-color: #3f3848;
         color: white;
       }
-  
-  .row {
-  display: -ms-flexbox; /* IE 10 */
-  display: flex;
-  -ms-flex-wrap: wrap; /* IE 10 */
-  flex-wrap: wrap;
-  padding: 0 4px;
-}
 
-/* Create two equal columns that sits next to each other */
-.column {
-  -ms-flex: 50%; /* IE 10 */
-  flex: 50%;
-  padding: 0 4px;
-}
+      .row {
+        display: -ms-flexbox;
 
-.column img {
-  margin-top: 8px;
-  vertical-align: middle;
-}
+        display: flex;
+        -ms-flex-wrap: wrap;
 
-/* Style the buttons */
-.btn {
-  border: none;
-  outline: none;
-  padding: 10px 16px;
-  background-color: #f1f1f1;
-  cursor: pointer;
-  font-size: 18px;
-}
+        flex-wrap: wrap;
+        padding: 0 4px;
+      }
 
-.btn:hover {
-  background-color: #ddd;
-}
 
-.btn.active {
-  background-color: #666;
-  color: white;
-}
-</style>
-</head>
-<body>
+      .column {
+        -ms-flex: 50%;
+
+        flex: 50%;
+        padding: 0 4px;
+      }
+
+      .column img {
+        margin-top: 8px;
+        vertical-align: middle;
+      }
+
+      .btn {
+        border: none;
+        outline: none;
+        padding: 10px 16px;
+        background-color: #f1f1f1;
+        cursor: pointer;
+        font-size: 18px;
+      }
+
+      .btn:hover {
+        background-color: #ddd;
+      }
+
+      .btn.active {
+        background-color: #666;
+        color: white;
+      }
+     /* Copied Code Ends*/
+    </style>
+  </head>
+  <body>
+    <!-- Copied Code Starts -->
+    
     <div class="header">
       <h1>Fan Art</h1>
     </div>
@@ -142,43 +169,46 @@
         </div>
       </li>
       <li><a href="https://selabbar.github.io/fanart-page/">Fan Art</a></li>
-      
-<div class="topnav">
-    <a href="https://selabbar.github.io/Assignment-3/" class="split">About</a>
-</div>
-     </ul>
-<div class="row"> 
-  <div class="column">
-    <img src="1.jpg" alt="book" style="width:100%">
-    <img src="2.jpg" alt="book" style="width:100%">
-    <img src="3.jpg" alt="book" style="width:100%">
-    <img src="4.jpg" alt="book" style="width:100%">
-    <img src="5.jpg" alt="book" style="width:100%">
-    <img src="6.jpg" alt="book" style="width:100%">
-    <img src="7.jpg" alt="book" style="width:100%">
-     <img src="14.jpg" alt="book" style="width:100%">
-  </div>
-  <div class="column">
-    <img src="8.jpg" alt="book" style="width:100%">
-    <img src="9.jpg" alt="book" style="width:100%">
-    <img src="10.jpg" alt="book" style="width:100%">
-    <img src="11.jpg" alt="book" style="width:100%">
-    <img src="12.jpg" alt="book" style="width:100%">
-    <img src="13.jpg" alt="book" style="width:100%">
-    <img src="15.jpg" alt="book" style="width:100%">
-    <img src="16.jpg" alt="book" style="width:100%">
-    <img src="17.jpg" alt="book" style="width:100%">
-  </div> 
-<script>
-// Get the elements with class="column"
-let elements = document.getElementsByClassName("column");
-  let i;
-  function two() {
-  for (i = 0; i < elements.length; i++) {
-    elements[i].style.msFlex = "50%";  // IE10
-    elements[i].style.flex = "50%";
-  }
-}
-  </script>
-</body>
+
+      <div class="topnav">
+        <a href="https://selabbar.github.io/Assignment-3/" class="split">About</a>
+      </div>
+    </ul>
+    <div class="row">
+      <div class="column">
+        <img src="1.jpg" alt="book" style="width:100%">
+        <img src="2.jpg" alt="book" style="width:100%">
+        <img src="3.jpg" alt="book" style="width:100%">
+        <img src="4.jpg" alt="book" style="width:100%">
+        <img src="5.jpg" alt="book" style="width:100%">
+        <img src="6.jpg" alt="book" style="width:100%">
+        <img src="7.jpg" alt="book" style="width:100%">
+        <img src="14.jpg" alt="book" style="width:100%">
+      </div>
+      <div class="column">
+        <img src="8.jpg" alt="book" style="width:100%">
+        <img src="9.jpg" alt="book" style="width:100%">
+        <img src="10.jpg" alt="book" style="width:100%">
+        <img src="11.jpg" alt="book" style="width:100%">
+        <img src="12.jpg" alt="book" style="width:100%">
+        <img src="13.jpg" alt="book" style="width:100%">
+        <img src="15.jpg" alt="book" style="width:100%">
+        <img src="16.jpg" alt="book" style="width:100%">
+        <img src="17.jpg" alt="book" style="width:100%">
+      </div>
+    </div>
+    <script>
+      let elements = document.getElementsByClassName("column");
+      let i;
+
+      function two() {
+        for (i = 0; i < elements.length; i++) {
+          elements[i].style.msFlex = "50%"; 
+          elements[i].style.flex = "50%";
+        }
+      }
+      two();
+    </script>
+ <!-- Copied Code Ends -->
+  </body>
 </html>
